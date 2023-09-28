@@ -359,8 +359,6 @@ li .address:focus {
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
     }
 
 .fourth-section-item:hover,
@@ -369,23 +367,6 @@ li .address:focus {
                 0px 1px 1px 0px rgba(46, 47, 66, 0.16);
 }
 
-.fourth-section-item:hover .overlay {
-    transform: translateY(0%);
-}
-
-    .overlay {
-    background-color: #3f51b5;
-    display: inline-block;
-    padding: 2px 4px;
-    border-radius: 2px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform 250ms ease-in-out;
-    transform: translateY(100%);
-}
 
 .portfolio-cont {
     padding: 32px 16px;
