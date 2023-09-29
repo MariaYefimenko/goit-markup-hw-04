@@ -56,6 +56,9 @@ ol {
     border-bottom: 1px solid #E7E9FC;
     display: flex;
     padding: 24px 0;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -102,16 +105,7 @@ address {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation-item:first-child::after  {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    height: 4px;
-    width: 100%;
-    background-color:#404BBF;
-    border-radius: 2px;
-}
+
 
 .navigation-item-link {
     text-decoration: none;
@@ -124,8 +118,26 @@ address {
 
 .navigation-item-link:hover,
 .navigation-item-link:focus {
-    color:#404BBF;
+    color: #404BBF;
 }
+
+.first-navigation-link {
+    position: relative;
+    color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.first-navigation-link::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+    width: 100%;
+}
+
 
 .head-address {
     font-style: normal;
@@ -144,9 +156,7 @@ address {
 
 ul .header-address-item {
     font-style: normal;
-    transition: color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 li .address {
@@ -157,6 +167,7 @@ li .address {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 li .address:hover,
@@ -172,8 +183,10 @@ li .address:focus {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
         url(../images/bg_hero.jpg);
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     padding: 188px 0;
+    max-width: 1440px;
 }
 
 .main-header-first {
@@ -205,6 +218,7 @@ li .address:focus {
     display: block;
     margin: 0 auto;
     min-width: 169px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-button:hover,
@@ -267,7 +281,7 @@ li .address:focus {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    letter-spacing: 0.02em; 
+    letter-spacing: 0.02em;
 }
 
 /*======================SECTION TEAM==============================*/
@@ -286,8 +300,9 @@ li .address:focus {
     background-color: #FFFFFF;
     width: calc((100% - 24px * 3)/ 4);
     border-radius: 0 0 4px 4px;
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-                0px 1px 1px 0px rgba(46, 47, 66, 0.16);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+                0px 1px 1px rgba(46, 47, 66, 0.16),
+                0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .section-three-cont {
@@ -327,9 +342,7 @@ li .address:focus {
     justify-content: center;
     background-color: #4D5AE5;
     border-radius: 50%;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-icon:hover,
@@ -363,8 +376,9 @@ li .address:focus {
 
 .fourth-section-item:hover,
 .fourth-section-item:focus {
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-                0px 1px 1px 0px rgba(46, 47, 66, 0.16);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+                0px 1px 1px rgba(46, 47, 66, 0.16),
+                0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 
@@ -402,6 +416,7 @@ li .address:focus {
     display: flex;
     align-content: center;
     justify-content: space-between;
+    align-items: baseline;
 }
 
 .footer-logo-container {
@@ -472,9 +487,7 @@ li .address:focus {
     justify-content: center;
     background-color: #4D5AE5;
     border-radius: 50%;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-icon:hover,
